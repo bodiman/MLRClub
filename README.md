@@ -1,18 +1,21 @@
 # Wrapper
 
-Description
+## Description
 -----------
 
 Takes in a model 
 
 
-Constructor
+## Constructor
 -----------
 
 config: **kwargs
   Named hyperparameters for the model
 
-Methods
+model_path: string
+  path to the model
+
+## Methods
 -------
 
 encode: string
@@ -21,3 +24,7 @@ encode: string
 predict: string
   return text given a prompt
 
+
+
+
+#
