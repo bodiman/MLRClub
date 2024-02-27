@@ -1,11 +1,23 @@
 import torch.nn as nn
 import gymnasium as gym
 
+from openai_gym import spaces
 
-class Environment(gym.Env):
+import numpy as np
+
+from model import LinearModel
+
+
+class TransformerFinetuneEnv(gym.Env):
     def __init__(self, llm, ):
-        self.action_space = None
-        self.observation_space = None
+        self.observation_shape = spaces.Discrete(4096)    
+        self.action_space = spaces.Discrete(32000)
+
+        self.network = LinearModel()
+        
+
+    def step(self, action):
+        ...
 
     """
     Parameters
@@ -34,8 +46,6 @@ class Environment(gym.Env):
 
 
     """
-    def step(self):
-        ...
     
 
     """
